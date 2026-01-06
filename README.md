@@ -5,6 +5,9 @@ A personal portfolio website crafted to reflect my journey, skills, and projects
 This site is designed with a dark, elegant aesthetic and smooth interactions, focusing on clarity, motion, and intentional design.
 
 ---
+##Preview
+![portfolio](portfolio.gif)
+---
 
 ## ✨ Overview
 
