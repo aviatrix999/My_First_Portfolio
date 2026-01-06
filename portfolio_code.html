@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Amisha Patel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: radial-gradient(circle at top, #0b1022, #05070f);
+            color: #f5f7fa;
+            overflow-x: hidden;
+        }
+
+        #cursor {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #3f8efc55, transparent 70%);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .gold {
+            color: #e6b566
+        }
+
+        .blue {
+            color: #3f8efc
+        }
+
+        .purple {
+            color: #9b6dff
+        }
+
+        .teal {
+            color: #2ed3b7
+        }
+
+        .pink {
+            color: #ff5c8a
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            text-shadow: 0 0 15px currentColor;
+        }
+    </style>
+</head>
+
+<body class="font-light relative text-center">
+    <div id="cursor"></div>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 py-5 flex justify-center bg-black/40 backdrop-blur">
+        <div class="flex gap-10 items-center">
+            <span class="tracking-widest font-semibold gold">AMISHA</span>
+            <div class="space-x-8 text-sm uppercase tracking-widest">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-10 pt-32 gap-6">
+        <h1 class="text-6xl font-semibold">Amisha Patel</h1>
+
+        <p class="text-xl text-[#9AA4B2]">
+            Engineering <span class="blue">logic</span>,
+            <span class="purple">creativity</span> &
+            <span class="gold">impact</span>.
+        </p>
+
+        <p class="uppercase tracking-widest text-sm teal">
+            Level <span id="age">0</span> unlocked
+        </p>
+
+        <div class="flex gap-8 mt-6 text-2xl">
+            <a class="icon blue" href="https://www.linkedin.com/in/amisha-patel-481917376/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="icon purple" href="https://github.com/aviatrix999" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center px-10 gap-10">
+        <h2 class="text-6xl opacity-50">ABOUT</h2>
+
+        <p class="text-lg text-[#9AA4B2] max-w-xl">
+            B.Tech CSE (Data Science) student at NIAT Pune.
+            I design tech that feels elegant, powerful, and intentional.
+        </p>
+
+        <div class="glass p-10 space-y-4">
+            <p><i class="fa-solid fa-location-dot gold mr-3"></i>Pune, India</p>
+            <p><i class="fa-solid fa-user teal mr-3"></i>Undergraduate</p>
+            <p><i class="fa-solid fa-graduation-cap purple mr-3"></i>NIAT Pune</p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="py-32 flex flex-col items-center gap-10">
+        <h2 class="text-4xl gold">Education</h2>
+
+        <div class="glass p-8 max-w-md">
+            <h3 class="text-xl purple">B.Tech CSE (Data Science)</h3>
+            <p class="text-[#9AA4B2]">NIAT Pune · 2024–2028</p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="min-h-screen flex flex-col justify-center items-center gap-8 bg-black/20">
+        <h2 class="text-5xl blue">Skills</h2>
+
+        <p class="text-xl ">
+            <i class="fa-solid fa-code purple mr-3"></i>Python · JavaScript
+        </p>
+        <p class="text-xl ">
+            <i class="fa-solid fa-globe blue mr-3"></i>HTML · CSS · Tailwind
+        </p>
+        <p class="text-xl ">
+            <i class="fa-solid fa-toolbox gold mr-3"></i>Git · VS Code
+        </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-32 flex flex-col items-center gap-16">
+        <h2 class="text-4xl teal">Projects</h2>
+
+        <div class="grid md:grid-cols-2 gap-10 justify-items-center">
+            <div class="glass p-8 max-w-sm hover:scale-105 transition">
+                <h3 class="text-xl pink mb-3">Portfolio Website</h3>
+                <p class="text-[#9AA4B2]">Animated personal portfolio using Tailwind & JS.</p>
+            </div>
+
+            <div class="glass p-8 max-w-sm hover:scale-105 transition">
+                <h3 class="text-xl blue mb-3">Upcoming Project</h3>
+                <p class="text-[#9AA4B2]">More coming soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="min-h-screen flex flex-col justify-center items-center gap-6 bg-black/20">
+        <h2 class="text-4xl pink">Contact</h2>
+
+        <p><i class="fa-solid fa-envelope pink mr-3"></i>amishapatel792834@gmail.com</p>
+        <p><i class="fa-solid fa-phone gold mr-3"></i>+91 7410530320</p>
+
+        <div class="flex gap-8 mt-6 text-2xl">
+            <a class="icon blue" href="#"><i class="fab fa-linkedin"></i></a>
+            <a class="icon purple" href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center opacity-40">
+        © 2025 Amisha Patel
+    </footer>
+
+    <script>
+        const elements = document.querySelectorAll('section, .glass');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => e.isIntersecting && e.target.classList.add('show'));
+        }, {
+            threshold: 0.2
+        });
+        elements.forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+
+        const cursor = document.getElementById("cursor");
+        document.addEventListener("mousemove", e => {
+            cursor.style.left = e.clientX + "px";
+            cursor.style.top = e.clientY + "px";
+        });
+
+        let age = 0;
+        const ageSpan = document.getElementById("age");
+        const interval = setInterval(() => {
+            age++;
+            ageSpan.innerText = age;
+            if (age === 19) clearInterval(interval);
+        }, 80);
+    </script>
+
+</body>
+
+</html>
